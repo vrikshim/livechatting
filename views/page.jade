@@ -1,0 +1,57 @@
+doctype html 
+html
+    head
+        title= "Real time web chat"
+        script(src='/chat.js')
+        script(src='/socket.io/socket.io.js')
+        style.
+            html, body {
+                height: 100%;
+             
+                align-items: center;
+                justify-content: center;
+            }
+            #content {
+                width: 500px;
+                height: 300px;
+                margin-top: 20px;
+                margin-left: 380px;
+                margin=rig : 50px;
+                 align-items: center;
+                border: solid 1px #999;
+                overflow-y: scroll;
+            }
+            .controls {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .controls label {
+                display: block;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 5px;
+            }
+            .controls input[type="text"] {
+                width: 350px;
+                padding: 5px;
+                border: solid 1px #ccc;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .controls input[type="button"] {
+                padding: 5px 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    body
+        #content
+        .controls
+            label(for="name") Name: 
+            input#name(type='text')
+            br
+            label(for="field") Message:
+            input#field(type='text')
+            input#send(type='button', value='Send')
