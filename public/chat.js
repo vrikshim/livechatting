@@ -7,6 +7,10 @@ window.onload = function() {
     var content = document.getElementById("content");
     var name = document.getElementById("name");
 
+
+    // this is an act of bafflement for me we are done by you this is not done by me but by you as we have already pledged our fealty to you
+
+
     //message listener
     socket.on('message', function (data) {
         if(data.message) {
@@ -34,10 +38,10 @@ window.onload = function() {
     };
     // set enter key listener 
     field.addEventListener('keypress', function (e) {
-	    var key = e.which || e.keyCode;
-	    if (key === 13) { 
-	    	sendButton.onclick();
-    	}
-	});
+        if (e.key === 'Enter') { 
+            sendButton.onclick();
+        }
+    });
+    
 }
 
